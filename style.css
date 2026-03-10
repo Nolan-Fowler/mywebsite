@@ -1,0 +1,185 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", sans-serif;
+}
+
+html { scroll-behavior: smooth; }
+
+/* ROOT COLORS */
+:root {
+  --bg-light: #f5f7f4;
+  --bg-dark: #121212;
+  --text-light: #2e2e2e;
+  --text-dark: #f1f1f1;
+  --card-light: #ffffff;
+  --card-dark: #1e1e1e;
+  --accent: #3b6b4f;
+}
+
+/* BODY */
+body {
+  background: var(--bg-light);
+  color: var(--text-light);
+  line-height: 1.6;
+  transition: background 0.3s, color 0.3s;
+  border: 18px solid transparent;
+  border-image: url("images/tea-leaf-border.svg") 30 round;
+}
+
+body.dark {
+  background: var(--bg-dark);
+  color: var(--text-dark);
+}
+
+/* NAV */
+.top-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+  background: rgba(255,255,255,0.9);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+body.dark .top-nav {
+  background: rgba(18,18,18,0.95);
+}
+
+.top-nav a {
+  text-decoration: none;
+  margin-left: 25px;
+  color: inherit;
+  font-weight: 500;
+}
+
+.logo { height: 50px; }
+
+/* THEME TOGGLE */
+.theme-toggle {
+  position: fixed;
+  top: 15px;
+  right: 15px;
+  font-size: 22px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 200;
+}
+
+/* HERO */
+.hero {
+  text-align: center;
+  padding: 100px 20px;
+}
+
+.hero-logo {
+  width: 220px;
+  margin-bottom: 30px;
+}
+
+/* SECTIONS */
+.section {
+  max-width: 900px;
+  margin: auto;
+  padding: 80px 20px;
+}
+
+.alt {
+  background: #f0f3f1;
+}
+
+body.dark .alt {
+  background: #1a1a1a;
+}
+
+/* CARDS */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(220px,1fr));
+  gap: 24px;
+}
+
+.card {
+  background: var(--card-light);
+  padding: 30px;
+  border-radius: 16px;
+  transition: 0.3s;
+}
+
+body.dark .card {
+  background: var(--card-dark);
+}
+
+/* FAQ */
+.faq-question {
+  padding: 15px;
+  background: #e3ece6;
+  border-radius: 10px;
+  cursor: pointer;
+  margin: 10px 0;
+}
+
+body.dark .faq-question {
+  background: #2a2a2a;
+}
+
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: 0.4s;
+  background: #f7f7f7;
+  border-radius: 10px;
+  padding: 0 15px;
+}
+
+body.dark .faq-answer {
+  background: #1f1f1f;
+}
+
+.faq-answer.show {
+  max-height: 400px;
+  padding: 15px;
+}
+
+/* BUTTON */
+.btn {
+  display: inline-block;
+  padding: 14px 30px;
+  background: var(--accent);
+  color: white;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 40px;
+  background: var(--accent);
+  color: white;
+}
+
+footer a {
+  color: white;
+  margin: 0 10px;
+  text-decoration: none;
+}
+
+body {
+  background: var(--bg-light);
+  color: var(--text-light);
+  line-height: 1.6;
+  transition: background 0.3s, color 0.3s;
+
+  border: 18px solid transparent;
+  border-image-source: url("images/tea-leaf-border.svg");
+  border-image-slice: 30;
+  border-image-repeat: round;
+}
+
